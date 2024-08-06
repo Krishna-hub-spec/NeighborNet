@@ -1,0 +1,41 @@
+const types = ["xyz", "abc"]
+
+const[query, setQuery]= usestate({
+/*ex only*/   type : "mnskjds",
+       location : "",
+});
+/* some function to use on click*/
+const switchType = (val) => {
+    setQuery((prev)=> ({ ...prev, type:val}));
+
+};
+
+{types.map((type)=> (
+<button key ={type} onClick= {()=> switchType(type)}> 
+{type}
+</button>
+))}
+
+
+for now the home page i have created is the following.
+import React from 'react';
+import { userEvents, userGroups } from '../../lib/sampledata';
+import './home.scss';
+function Home() {
+  const posts = userEvents;
+  const groups = userGroups;
+
+  return (
+    <div className='homePage'>
+      <div className='homeContainer'>
+        <div className='wrapper'></div>
+      </div>
+      <div className='mapContainer'>Map</div>
+    </div>
+  );
+}
+export default Home;
+
+In homepage, the home container should display the following.
+*Should display the events posted by user from the dummydata.(with title, description )
+
